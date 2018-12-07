@@ -83,7 +83,7 @@ BlockEditorMorph, BlockDialogMorph, PrototypeHatBlockMorph, localize,
 TableMorph, TableFrameMorph, normalizeCanvas, BooleanSlotMorph, HandleMorph,
 AlignmentMorph, Process, XML_Element, VectorPaintEditorMorph*/
 
-modules.objects = '2018-November-28';
+modules.objects = '2018-December-07';
 
 var SpriteMorph;
 var StageMorph;
@@ -138,6 +138,8 @@ SpriteMorph.prototype.categories =
         'pen',
         'variables',
         'lists',
+        'arduino',
+        'wemos',
         'other'
     ];
 
@@ -151,6 +153,8 @@ SpriteMorph.prototype.blockColor = {
     operators : new Color(98, 194, 19),
     variables : new Color(243, 118, 29),
     lists : new Color(217, 77, 17),
+    arduino : new Color(65, 144, 161),
+    wemos : new Color(0, 150, 255),
     other: new Color(150, 150, 150)
 };
 
@@ -2378,7 +2382,7 @@ SpriteMorph.prototype.freshPalette = function (category) {
     palette.growth = new Point(0, MorphicPreferences.scrollBarSize);
 
     // toolbar:
-    
+
     palette.toolBar = new AlignmentMorph('column');
 
     searchButton = new PushButtonMorph(

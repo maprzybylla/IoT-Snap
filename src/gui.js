@@ -224,12 +224,12 @@ IDE_Morph.prototype.init = function (isAutoFill) {
     this.globalVariables = new VariableFrame();
     this.currentSprite = new SpriteMorph(this.globalVariables);
     this.sprites = new List([this.currentSprite]);
-    this.currentCategory = 'motion';
+    this.currentCategory = 'control';
     this.currentTab = 'scripts';
     this.projectName = '';
     this.projectNotes = '';
 
-    this.logoURL = this.resourceURL('src', 'snap_logo_sm.png');
+    this.logoURL = this.resourceURL('src', 'IoT-Snap-logo.png');
     this.logo = null;
     this.controlBar = null;
     this.categories = null;
