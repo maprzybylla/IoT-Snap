@@ -1,4 +1,11 @@
 
+
+IoT Snap! CREATIVELY CONTROL WORLD
+
+is a microcontroller add-on supporting wireless control of Arduino Uno Wifi and Wemos D1 
+
+for
+
 Snap! Build Your Own Blocks
 
 http://snap.berkeley.edu
