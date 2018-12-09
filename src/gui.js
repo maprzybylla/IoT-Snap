@@ -268,6 +268,17 @@ IDE_Morph.prototype.init = function (isAutoFill) {
 
     // override inherited properites:
     this.color = this.backgroundColor;
+
+
+    // load IoT Snap!
+    this.getURL(
+        this.resourceURL('Examples', 'IoT-Snap.xml'),
+        function (txt) {
+            this.droppedText(txt, 'IoT Snap! Example Project');
+        }
+    );
+
+    this.setFlatDesign();
 };
 
 IDE_Morph.prototype.openIn = function (world) {
@@ -3133,19 +3144,50 @@ IDE_Morph.prototype.projectMenu = function () {
                 'Costumes' : 'Backgrounds',
         shiftClicked = (world.currentKey === 16);
 
-    menu = new MenuMorph(this);
-    menu.addItem('Project notes...', 'editProjectNotes');
-    menu.addLine();
-    menu.addPair('New', 'createNewProject', '^N');
-    menu.addPair('Open...', 'openProjectsBrowser', '^O');
-    menu.addPair('Save', "save", '^S');
-    menu.addItem('Save As...', 'saveProjectsBrowser');
-    menu.addLine();
-    menu.addItem(
-        'Import...',
-        'importLocalFile',
-        'file menu import hint' // looks up the actual text in the translator
-    );
+        menu = new MenuMorph(this);
+        menu.addItem('Project notes...', 'editProjectNotes');
+        menu.addLine();
+        menu.addPair('New example project', function() {
+          this.confirm(
+              'Replace the current project with a new one?',
+              'New Project',
+              function () {
+                myself.getURL(
+                  myself.resourceURL('Examples', 'IoT-Snap.xml'),
+                  function (txt) {
+                      myself.droppedText(txt, 'IoT Snap! Example Project');
+                  }
+                );
+              }
+          );
+        });
+
+        menu.addPair('New empty project', function() {
+          myself.createNewProject();
+        }, '^N');
+        menu.addPair('Open...', 'openProjectsBrowser', '^O');
+        menu.addPair('Save', "save", '^S');
+        menu.addItem('Save As...', 'saveProjectsBrowser');
+        menu.addLine();
+        menu.addItem(
+            'Import...',
+            'importLocalFile',
+            'file menu import hint' // looks up the actual text in the translator
+        );
+    //
+    // menu = new MenuMorph(this);
+    // menu.addItem('Project notes...', 'editProjectNotes');
+    // menu.addLine();
+    // menu.addPair('New', 'createNewProject', '^N');
+    // menu.addPair('Open...', 'openProjectsBrowser', '^O');
+    // menu.addPair('Save', "save", '^S');
+    // menu.addItem('Save As...', 'saveProjectsBrowser');
+    // menu.addLine();
+    // menu.addItem(
+    //     'Import...',
+    //     'importLocalFile',
+    //     'file menu import hint' // looks up the actual text in the translator
+    // );
 
     if (shiftClicked) {
         menu.addItem(
@@ -4988,7 +5030,14 @@ IDE_Morph.prototype.createNewProject = function () {
     this.confirm(
         'Replace the current project with a new one?',
         'New Project',
-        function () {myself.newProject(); }
+        function () {
+          myself.newProject();
+          myself.getURL(
+            myself.resourceURL('Libraries', 'mcu-blocks.xml'),
+            function (txt) {
+                myself.droppedText(txt, 'IoT Snap! blocks');
+            }
+          );}
     );
 };
 
