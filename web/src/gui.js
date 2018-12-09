@@ -132,6 +132,8 @@ IDE_Morph.prototype.setDefaultDesign = function () {
     IDE_Morph.prototype.scriptsPaneTexture = this.scriptsTexture();
     IDE_Morph.prototype.padding = 5;
 
+    // IDE_Morph.logoURL = IDE_Morph.resourceURL('src', 'IoT-Snap-logo-transp.png');
+
     SpriteIconMorph.prototype.labelColor
         = IDE_Morph.prototype.buttonLabelColor;
     CostumeIconMorph.prototype.labelColor
@@ -171,6 +173,8 @@ IDE_Morph.prototype.setFlatDesign = function () {
     IDE_Morph.prototype.appModeColor = IDE_Morph.prototype.frameColor;
     IDE_Morph.prototype.scriptsPaneTexture = null;
     IDE_Morph.prototype.padding = 1;
+
+    // IDE_Morph.logoURL = IDE_Morph.resourceURL('src', 'IoT-Snap-logo.png');
 
     SpriteIconMorph.prototype.labelColor
         = IDE_Morph.prototype.buttonLabelColor;
@@ -5033,7 +5037,7 @@ IDE_Morph.prototype.createNewProject = function () {
         function () {
           myself.newProject();
           myself.getURL(
-            myself.resourceURL('Libraries', 'mcu-blocks.xml'),
+            myself.resourceURL('libraries', 'mcu-blocks.xml'),
             function (txt) {
                 myself.droppedText(txt, 'IoT Snap! blocks');
             }
