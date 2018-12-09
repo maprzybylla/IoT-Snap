@@ -1,0 +1,26 @@
+{
+  "name": "iot-snap",
+  "productName": "IoT Snap!",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maprzybylla/Snap.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maprzybylla/Snap/issues"
+  },
+  "homepage": "https://github.com/maprzybylla/Snap#readme",
+  "devDependencies": {
+    "electron": "^3.0.10",
+    "electron-packager": "^13.0.0"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build-mac": "electron-packager . IoT-Snap --platform=darwin --arch=x64 --out=dist --icon \"web/src/favicon.icns\" --overwrite",
+    "build-win": "electron-packager . IoT-Snap --platform=win32 --arch=x64 --out=dist --overwrite"
+  }
+}
