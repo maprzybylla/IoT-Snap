@@ -1,8 +1,8 @@
 
 
-IoT Snap! 
+IoT Snap!
 
-is a microcontroller add-on supporting wireless control of Arduino Uno Wifi and Wemos D1 
+is an extension of the Snap! programming language, integrating the support for wireless control of Arduino Uno Wifi and Wemos D1 microcontrollers 
 
 for
 
