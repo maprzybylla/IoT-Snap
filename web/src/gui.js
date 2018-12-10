@@ -234,6 +234,7 @@ IDE_Morph.prototype.init = function (isAutoFill) {
     this.projectNotes = '';
 
     this.logoURL = this.resourceURL('src', 'IoT-Snap-logo.png');
+
     this.logo = null;
     this.controlBar = null;
     this.categories = null;
