@@ -8,12 +8,12 @@
     "type": "git",
     "url": "git+https://github.com/maprzybylla/IoT-Snap.git"
   },
-  "author": "",
+  "author": "Mareen Przybylla",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/maprzybylla/Snap/issues"
+    "url": "https://github.com/maprzybylla/IoT-Snap/issues"
   },
-  "homepage": "https://github.com/maprzybylla/Snap#readme",
+  "homepage": "https://github.com/maprzybylla/IoT-Snap#readme",
   "devDependencies": {
     "electron": "^3.0.10",
     "electron-packager": "^13.0.0"
