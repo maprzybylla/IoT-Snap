@@ -132,7 +132,7 @@ IDE_Morph.prototype.setDefaultDesign = function () {
     IDE_Morph.prototype.scriptsPaneTexture = this.scriptsTexture();
     IDE_Morph.prototype.padding = 5;
 
-    // IDE_Morph.prototype.logoURL = IDE_Morph.resourceURL('src', 'IoT-Snap-logo-transp.png');
+    // IDE_Morph.prototype.logoURL = IDE_Morph.resourceURL('src', 'IoT-Snap-logo_white.png');
 
     SpriteIconMorph.prototype.labelColor
         = IDE_Morph.prototype.buttonLabelColor;
@@ -158,7 +158,7 @@ IDE_Morph.prototype.setFlatDesign = function () {
     IDE_Morph.prototype.backgroundColor = new Color(200, 200, 200);
     IDE_Morph.prototype.frameColor = new Color(255, 255, 255);
 
-    // IDE_Morph.prototype.logoURL = IDE_Morph.resourceURL('src', 'IoT-Snap-logo.png');
+    // IDE_Morph.prototype.logoURL = IDE_Morph.resourceURL('src', 'IoT-Snap-logo_dark.png');
 
     IDE_Morph.prototype.groupColor = new Color(230, 230, 230);
     IDE_Morph.prototype.sliderColor = SpriteMorph.prototype.sliderColor;
@@ -234,12 +234,7 @@ IDE_Morph.prototype.init = function (isAutoFill) {
     this.projectName = '';
     this.projectNotes = '';
 
-    if (this.isFlat=true) {
-      this.logoURL = this.resourceURL('src', 'IoT-Snap-logo_dark.png');
-    } else
-    {
-      this.logoURL = this.resourceURL('src', 'IoT-Snap-logo_white.png');
-    }
+    this.logoURL = this.resourceURL('src', 'IoT-Snap-logo_dark_c.png');
 
     this.logo = null;
     this.controlBar = null;
@@ -590,7 +585,14 @@ IDE_Morph.prototype.createLogo = function () {
         this.logo.destroy();
     }
 
+
+    if (MorphicPreferences.isFlat) {
+      this.logoURL=this.resourceURL('src', 'IoT-Snap-logo_dark_c.png')
+    } else {
+      this.logoURL=this.resourceURL('src', 'IoT-Snap-logo_white_c.png')
+    }
     this.logo = new Morph();
+
     this.logo.texture = this.logoURL;
     this.logo.drawNew = function () {
         this.image = newCanvas(this.extent());
