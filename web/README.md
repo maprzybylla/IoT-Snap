@@ -1,24 +1,19 @@
-
-
 IoT Snap!
 
-is an extension of the Snap! programming language, integrating the support for wireless control of Arduino Uno Wifi and Wemos D1 microcontrollers 
+is an extension of the Snap! programming language, integrating the support for wireless control of Arduino Uno Wifi and Wemos D1 microcontroller boards
 
-for
+written by Mareen Przybylla (mareen.przybylla@uni-potsdam.de) with support from Andreas Grillenberger
 
-Snap! Build Your Own Blocks
 
-http://snap.berkeley.edu
 
-a visual, blocks based programming language
-inspired by Scratch
+Snap! Build Your Own Blocks (http://snap.berkeley.edu) is a visual, blocks based programming language inspired by Scratch
 
 written by Jens Mönig and Brian Harvey
 jens@moenig.org, bh@cs.berkeley.edu
 
 Copyright (C) 2018 by Jens Mönig and Brian Harvey
 
-Snap! is free software: you can redistribute it and/or modify
+IoT Snap! just like Snap! is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
 published by the Free Software Foundation, either version 3 of
 the License, or (at your option) any later version.
