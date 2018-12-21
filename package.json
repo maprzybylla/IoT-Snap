@@ -15,8 +15,8 @@
   },
   "homepage": "https://github.com/maprzybylla/IoT-Snap#readme",
   "devDependencies": {
-    "electron": "^3.0.10",
-    "electron-packager": "^13.0.0"
+    "electron": "^3.0.12",
+    "electron-packager": "^13.0.1"
   },
   "scripts": {
     "start": "electron .",
