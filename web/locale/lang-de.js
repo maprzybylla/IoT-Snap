@@ -253,7 +253,7 @@ SnapTranslator.dict.de = {
         'neues Objekt zeichnen',
     'take a camera snapshot and\nimport it as a new sprite':
         'neues Objekt mit Webcam-Kostüm hinzufügen',
-    
+
 
     // tab help
     'costumes tab help':
@@ -694,6 +694,30 @@ SnapTranslator.dict.de = {
     'Make a block':
         'Neuer Block',
 
+    // Arduino / Wemos
+    'show':
+        'anzeigen',
+    'hide':
+        'verstecken',
+    'activate':
+        'aktivieren',
+    'deactivate':
+        'deaktivieren',
+    'start':
+        'beginne',
+    'stop':
+        'beende',
+    'Text (max. length =24)':
+        'Text (max. Länge =24)',
+    'clockwise: ca. 1000-1475':
+        'im Uhrzeigersinn: ca. 1000-1475',
+    'stop: ca. 1475':
+        'anhalten: ca. 1475',
+    'counter-clockwise: ca. 1475-2000':
+        'gegen den Uhrzeigersinn: ca. 1475-2000',
+    'angle: 0-180':
+        'Winkel: 0-180',
+
     // menus
     // snap menu
     'About...':
@@ -838,7 +862,7 @@ SnapTranslator.dict.de = {
         'Passwort zurücksetzen...',
     'Resend Verification Email...':
         'Bestätigungsmail nochmal senden...',
-    
+
 
     // settings menu
     'Language...':
@@ -1244,7 +1268,7 @@ SnapTranslator.dict.de = {
     //    'drehen ↔',
     //'flip ↕':
     //    'drehen ↕',
-    
+
     'Vector Paint Editor':
         'Vektor-Editor',
     'Rectangle\n(shift: square)':
@@ -1473,11 +1497,11 @@ SnapTranslator.dict.de = {
         'Überprüfe, ob der Browser auf dem aktuellsten Stand \nund die Webcam korrekt konfiguriert ist.\n\nFür einige Browser muss Snap! mit HTTPS geöffnet\nwerden, um auf die Kamera zuzugreifen.\n\nErsetze dafür den "http://"-Teil in der Adresszeile mit"https://"',
     'Camera':
         'Kamera',
-    
+
     // sounds
     'Record a new sound':
         'neuen Klang aufnehmen',
-    
+
 
     // graphical effects
     'color':
