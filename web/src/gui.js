@@ -3175,9 +3175,9 @@ IDE_Morph.prototype.projectMenu = function () {
               'New Project',
               function () {
                 myself.getURL(
-                  myself.resourceURL('Examples', 'IoT-Snap.xml'),
+                  myself.resourceURL('Examples', 'get-started.xml'),
                   function (txt) {
-                      myself.droppedText(txt, 'IoT Snap! Example Project');
+                      myself.droppedText(txt, 'Get started with IoT Snap!');
                   }
                 );
               }
