@@ -276,11 +276,20 @@ IDE_Morph.prototype.init = function (isAutoFill) {
     this.color = this.backgroundColor;
 
 
-    // load IoT Snap!
-    this.getURL(
-        this.resourceURL('Examples', 'IoT-Snap.xml'),
+    // load IoT Snap! with get-started.xml (initial examples)
+    /*this.getURL(
+        this.resourceURL('Examples', 'get-started.xml'),
         function (txt) {
-            this.droppedText(txt, 'IoT Snap! Example Project');
+          this.droppedText(txt, 'Get Started with IoT Snap!');
+        }
+    );
+    */
+
+    // load IoT Snap! with mcu-blocks.xml (empty project)
+    this.getURL(
+        this.resourceURL('libraries', 'mcu-blocks.xml'),
+        function (txt) {
+            this.droppedText(txt, 'Iot Snap! blocks');
         }
     );
 
