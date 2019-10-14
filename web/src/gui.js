@@ -75,7 +75,7 @@ isRetinaSupported, SliderMorph, Animation, BoxMorph, MediaRecorder*/
 
 // Global stuff ////////////////////////////////////////////////////////
 
-modules.gui = '2018-December-07';
+modules.gui = '2019-October-14';
 
 // Declarations
 
@@ -132,7 +132,6 @@ IDE_Morph.prototype.setDefaultDesign = function () {
     IDE_Morph.prototype.scriptsPaneTexture = this.scriptsTexture();
     IDE_Morph.prototype.padding = 5;
 
-    // IDE_Morph.prototype.logoURL = IDE_Morph.resourceURL('src', 'IoT-Snap-logo_white.png');
 
     SpriteIconMorph.prototype.labelColor
         = IDE_Morph.prototype.buttonLabelColor;
@@ -146,7 +145,6 @@ IDE_Morph.prototype.setDefaultDesign = function () {
 
 IDE_Morph.prototype.setFlatDesign = function () {
     MorphicPreferences.isFlat = true;
-
     SpriteMorph.prototype.paletteColor = new Color(255, 255, 255);
     SpriteMorph.prototype.paletteTextColor = new Color(70, 70, 70);
     StageMorph.prototype.paletteTextColor
@@ -157,8 +155,6 @@ IDE_Morph.prototype.setFlatDesign = function () {
     IDE_Morph.prototype.buttonContrast = 30;
     IDE_Morph.prototype.backgroundColor = new Color(200, 200, 200);
     IDE_Morph.prototype.frameColor = new Color(255, 255, 255);
-
-    // IDE_Morph.prototype.logoURL = IDE_Morph.resourceURL('src', 'IoT-Snap-logo_dark.png');
 
     IDE_Morph.prototype.groupColor = new Color(230, 230, 230);
     IDE_Morph.prototype.sliderColor = SpriteMorph.prototype.sliderColor;
@@ -203,7 +199,7 @@ IDE_Morph.prototype.scriptsTexture = function () {
     return pic;
 };
 
-IDE_Morph.prototype.setDefaultDesign();
+IDE_Morph.prototype.setFlatDesign();
 
 // IDE_Morph instance creation:
 
@@ -654,7 +650,7 @@ IDE_Morph.prototype.createControlBar = function () {
         stageSizeButton,
         appModeButton,
         steppingButton,
-        cloudButton,
+        //cloudButton,
         x,
         colors = [
             this.groupColor,
@@ -930,7 +926,7 @@ IDE_Morph.prototype.createControlBar = function () {
     this.controlBar.settingsButton = settingsButton; // for menu positioning
 
     // cloudButton
-    button = new PushButtonMorph(
+    /*button = new PushButtonMorph(
         this,
         'cloudMenu',
         new SymbolMorph('cloud', 11)
@@ -951,6 +947,7 @@ IDE_Morph.prototype.createControlBar = function () {
     cloudButton = button;
     this.controlBar.add(cloudButton);
     this.controlBar.cloudButton = cloudButton; // for menu positioning
+    */
 
     this.controlBar.fixLayout = function () {
         x = this.right() - padding;
@@ -986,11 +983,11 @@ IDE_Morph.prototype.createControlBar = function () {
         settingsButton.setCenter(myself.controlBar.center());
         settingsButton.setLeft(this.left());
 
-        cloudButton.setCenter(myself.controlBar.center());
-        cloudButton.setRight(settingsButton.left() - padding);
+      /*  cloudButton.setCenter(myself.controlBar.center());
+        cloudButton.setRight(settingsButton.left() - padding);*/
 
         projectButton.setCenter(myself.controlBar.center());
-        projectButton.setRight(cloudButton.left() - padding);
+        projectButton.setRight(settingsButton.left() - padding);
 
         this.refreshSlider();
         this.updateLabel();
@@ -2589,7 +2586,7 @@ IDE_Morph.prototype.snapMenu = function () {
     menu.popup(world, this.logo.bottomLeft());
 };
 
-IDE_Morph.prototype.cloudMenu = function () {
+/*IDE_Morph.prototype.cloudMenu = function () {
     var menu,
         myself = this,
         world = this.world(),
@@ -2729,7 +2726,7 @@ IDE_Morph.prototype.cloudMenu = function () {
         );
     }
     menu.popup(world, pos);
-};
+};*/
 
 IDE_Morph.prototype.settingsMenu = function () {
     var menu,
@@ -3620,10 +3617,10 @@ IDE_Morph.prototype.aboutSnap = function () {
         module, btn1, btn2, btn3, btn4, licenseBtn, translatorsBtn,
         world = this.world();
 
-    aboutTxt = 'Snap! 4.2.2.10 - dev -\nBuild Your Own Blocks\n\n'
-        + 'Copyright \u24B8 2018 Jens M\u00F6nig and '
+    aboutTxt = 'IoT Snap! based on Snap! 4.2.2.10 - dev -\nBuild Your Own Blocks\n\n'
+        + '(Snap! Copyright \u24B8 2018 Jens M\u00F6nig and '
         + 'Brian Harvey\n'
-        + 'jens@moenig.org, bh@cs.berkeley.edu\n\n'
+        + 'jens@moenig.org, bh@cs.berkeley.edu)\n\n'
 
         + 'Snap! is developed by the University of California, Berkeley\n'
         + '          with support from the National Science Foundation (NSF), '
@@ -4901,7 +4898,7 @@ IDE_Morph.prototype.toggleAppMode = function (appMode) {
     var world = this.world(),
         elements = [
             this.logo,
-            this.controlBar.cloudButton,
+            //this.controlBar.cloudButton,
             this.controlBar.projectButton,
             this.controlBar.settingsButton,
             this.controlBar.steppingButton,
