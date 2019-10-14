@@ -1304,6 +1304,10 @@ SnapTranslator.dict.de = {
     // new project
     'New Project':
         'Neues Projekt',
+    'New example project':
+        'Neues Beispielprojekt',
+    'New empty project':
+        'Neues leeres Projekt',
     'Replace the current project with a new one?':
         'Das aktuelle Projekt durch ein neues ersetzen?',
 
