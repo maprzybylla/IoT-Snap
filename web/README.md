@@ -2,7 +2,7 @@ IoT Snap!
 
 is an extension of the Snap! programming language, integrating the support for wireless control of Arduino Uno Wifi and Wemos D1 microcontroller boards
 
-written by Mareen Przybylla (mareen.przybylla@uni-potsdam.de) with support from Andreas Grillenberger
+created by Mareen Przybylla (kontakt@mareen-przybylla.de) with support from Andreas Grillenberger (www.an-gr.de)
 
 
 
